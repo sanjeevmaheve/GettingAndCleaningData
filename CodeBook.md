@@ -29,14 +29,14 @@ Following are the steps that 'run_analysis.R' executes:
    * Read in all the provided test data-set into dataframe and assign the column names.
    * Combine all the test data-set into a single dataframe i.e. append y_test and subject_test into X_test.
    * Finally, merge the training and test data frame into 1 dataframe.
-2. Extract only the measurements on the mean and standard deviation for each measurement.
+1. Extract only the measurements on the mean and standard deviation for each measurement.
    * Filter out those index values that contains mean() and std() columns.
    * Extract only measurements for the above column indices.
-3. Use descriptive activity names to name the activities in the data set.
+1. Use descriptive activity names to name the activities in the data set.
    * Merge the data based on the *activityCode* to get the names in final dataset.
-4. Appropriately labels the data set with descriptive variable names.
+1. Appropriately labels the data set with descriptive variable names.
    * Beautify the column names to retain only alphanumeric characters.
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+1. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
    * First exclude the cols that are not desired (for the time being); then aggregate on each numeric variable for average.
    * Get back the 'activityName' back into the data by merging activity dataframe.
    * Store the resulted dataframe into file under current directory.
